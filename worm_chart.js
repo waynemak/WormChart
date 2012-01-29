@@ -16,17 +16,20 @@ var WormChart = function(args) {
     return newPosValue;
   };
 
+  this.bindToClick = function() { 
+    var self = this;
+    $("#worm_chart").click(function(){
+      var newPos = self.updateValue(Math.floor(((250 - event.y) / 250.0) * 100));
+      $(self.container).trigger("chartUpdated", newPos);
+    });
+  };
+
   this.wormHtml = '<div id="worm_chart"> <div class="negative"></div> <div class="positive"> </div> </div>';
   
   $(this.container).html(this.wormHtml);
 
   this.render();
-
-  var self = this;
-  $("#worm_chart").click(function(){
-    var newPos = self.updateValue(Math.floor(((250 - event.y) / 250.0) * 100));
-    $(self.container).trigger("chartUpdated", newPos);
-  });
+  this.bindToClick();
   
   return this;
 };
