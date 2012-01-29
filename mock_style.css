@@ -1,0 +1,40 @@
+.content {
+  background-color: black;
+}
+
+.youtube_video {
+  float: left;
+  width: 450px;
+}
+
+.meter_container {
+  float: left;
+}
+
+.meter .no_longer_watching {
+  background-color: #ccc;
+  width: 30px;
+  height: 100px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.meter .still_watching {
+  background-color: #38AB0B;
+  width: 30px;
+  height: 215px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top: 1px solid #dfdfdf;
+}
+
+.percentage_still_watching {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-family: Arial;
+}
+
+.percentage_still_watching span {
+  color: #999;
+  
+}
