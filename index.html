@@ -13,8 +13,11 @@
   <script type="text/javascript">
     $(function(){
         window.worm = new WormChart({"positive": 80, 
-                                    "negative": 20,
                                     "container": "#worm_container"});
+
+        $("#worm_container").bind("chartUpdated", function(event, args) {
+            console.log(args);
+          })
 
 
     });
