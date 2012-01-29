@@ -1,6 +1,6 @@
 var WormChart = function(args) {
   this.positive = args["positive"];
-  this.negative = args["negative"];
+  this.negative = 100 - this.positive;
   this.container = args["container"];
 
 
@@ -11,7 +11,6 @@ var WormChart = function(args) {
   };
 
   this.updateNegative = function(newNegative) {
-    console.log(newNegative);
     this.positive = 100 - newNegative;
     this.negative = newNegative;
     this.render();
@@ -27,7 +26,6 @@ var WormChart = function(args) {
 
   var self = this;
   $("#worm_chart").click(function(){
-    console.log(event.y);
     var newNeg = self.updateNegative(Math.floor((event.y / 250.0) * 100));
     $(self.container).trigger("chartUpdated", newNeg);
   });
