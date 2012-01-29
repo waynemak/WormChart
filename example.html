@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="worm_container"></div>
+
+  <script src="jquery-1.7.1.min.js" type="text/javascript"></script>
+  <script src="worm_chart.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    $(function(){
+        window.worm = new WormChart({"positive": 80, 
+                                    "container": "#worm_container"});
+
+        $("#worm_container").bind("chartUpdated", function(event, args) {
+            console.log(args);
+          })
+
+
+    });
+  </script>
+</body>
+</html>
