@@ -2,14 +2,14 @@
   height: 250px;
   width: 40px;
   border: 1px solid black;
+  background-color: #ccc;
 }
 
 #worm_chart .positive {
   width: 100%;
-  background-color: green;
+  background-color: #38AB0B;
 }
 
 #worm_chart .negative {
   width: 100%;
-  background-color: red;
 }
