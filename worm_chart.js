@@ -3,19 +3,17 @@ var WormChart = function(args) {
   this.negative = 100 - this.positive;
   this.container = args["container"];
 
-
-
   this.render = function(){
     $("#worm_chart .positive").css("height", "" + this.positive + "%");
     $("#worm_chart .negative").css("height", "" + this.negative + "%");
   };
 
-  this.updateNegative = function(newNegative) {
-    this.positive = 100 - newNegative;
-    this.negative = newNegative;
+  this.updateValue = function(newPosValue) {
+    this.positive = newPosValue;
+    this.negative = 100 - newPosValue;
     this.render();
 
-    return newNegative;
+    return newPosValue;
   };
 
   this.wormHtml = '<div id="worm_chart"> <div class="negative"></div> <div class="positive"> </div> </div>';
@@ -26,8 +24,8 @@ var WormChart = function(args) {
 
   var self = this;
   $("#worm_chart").click(function(){
-    var newNeg = self.updateNegative(Math.floor((event.y / 250.0) * 100));
-    $(self.container).trigger("chartUpdated", newNeg);
+    var newPos = self.updateValue(Math.floor(((250 - event.y) / 250.0) * 100));
+    $(self.container).trigger("chartUpdated", newPos);
   });
   
   return this;
