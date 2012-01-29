@@ -6,9 +6,18 @@
 </head>
 <body>
   <div id="worm_chart">
+    <div class="negative"></div>
+    <div class="positive"> </div>
   </div>
 
   <script src="jquery-1.7.1.min.js" type="text/javascript"></script>
   <script src="worm_chart.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    $(function(){
+        window.worm = new WormChart({"positive": "90%", "negative": "10%"});
+
+    });
+  </script>
 </body>
 </html>

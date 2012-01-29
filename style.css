@@ -3,3 +3,13 @@
   width: 40px;
   border: 1px solid black;
 }
+
+#worm_chart .positive {
+  width: 100%;
+  background-color: green;
+}
+
+#worm_chart .negative {
+  width: 100%;
+  background-color: red;
+}
