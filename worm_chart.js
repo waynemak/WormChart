@@ -27,11 +27,11 @@ var WormChart = function(args) {
   };
 
   this.bindToClick = function() { 
-    var self = this;
-    jQuery("#worm_chart").click(function(){
-      var newPos = self.updateValue(Math.ceil(((250 - event.y) / 250.0) * 100));
-      jQuery(self.container).trigger("chartUpdated", newPos);
-    });
+    //var self = this;
+    //jQuery("#worm_chart").click(function(){
+      //var newPos = self.updateValue(Math.ceil(((250 - event.y) / 250.0) * 100));
+      //jQuery(self.container).trigger("chartUpdated", newPos);
+    //});
   };
 
   this.wormHtml = '<div id="worm_chart"> <div class="negative"></div> <div class="positive"> </div> </div>';
