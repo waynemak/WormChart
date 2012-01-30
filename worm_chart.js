@@ -29,7 +29,7 @@ var WormChart = function(args) {
   this.bindToClick = function() { 
     var self = this;
     jQuery("#worm_chart").click(function(){
-      var newPos = self.updateValue(Math.floor(((250 - event.y) / 250.0) * 100));
+      var newPos = self.updateValue(Math.ceil(((250 - event.y) / 250.0) * 100));
       jQuery(self.container).trigger("chartUpdated", newPos);
     });
   };
