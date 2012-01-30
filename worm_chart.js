@@ -2,11 +2,11 @@ var WormChart = function(args) {
   this.positive = args["positive"];
   this.negative = 100 - this.positive;
   this.container = args["container"];
-  this.height = $(this.container).css("height");
 
   this.render = function(){
     jQuery("#worm_chart .positive").css("height", "" + this.positive + "%");
     jQuery("#worm_chart .negative").css("height", "" + this.negative + "%");
+    this.height = parseFloat($(this.container).css("height"));
   };
 
   this.animateUpdate = function() { 
