@@ -2,6 +2,7 @@ var WormChart = function(args) {
   this.positive = args["positive"];
   this.negative = 100 - this.positive;
   this.container = args["container"];
+  this.height = $(this.container).css("height");
 
   this.render = function(){
     jQuery("#worm_chart .positive").css("height", "" + this.positive + "%");
@@ -29,7 +30,7 @@ var WormChart = function(args) {
   this.bindToClick = function() { 
     //var self = this;
     //jQuery("#worm_chart").click(function(){
-      //var newPos = self.updateValue(Math.ceil(((250 - event.y) / 250.0) * 100));
+      //var newPos = self.updateValue(Math.ceil(((this.height - event.y) / this.height.0) * 100));
       //jQuery(self.container).trigger("chartUpdated", newPos);
     //});
   };
