@@ -8,10 +8,20 @@ var WormChart = function(args) {
     jQuery("#worm_chart .negative").css("height", "" + this.negative + "%");
   };
 
+  this.animateUpdate = function() { 
+    jQuery("#worm_chart .positive").animate({
+      "height": "" + this.positive + "%"
+    }, "slow");
+
+    jQuery("#worm_chart .negative").animate({
+      "height": "" + this.negative + "%"
+    }, "slow");
+  };
+
   this.updateValue = function(newPosValue) {
     this.positive = newPosValue;
     this.negative = 100 - newPosValue;
-    this.render();
+    this.animateUpdate();
 
     return newPosValue;
   };
