@@ -6,11 +6,11 @@ It's a chart that looks like a worm.
 ```javascript
 
   // The data is just an array of percentages.
-  var data = [25, 25, 25, 25]
+  var data = [25, 34, 16, 25]
 
-  // It's easy just new up the object passing it the data you want to display
+  // It's easy. Just new up the object passing it the data you want to display
   // Tell it what element you want the WormChart to be drawn into
-  // And pass it an array of data that you want to render
+  // and pass it an array of data that you want to render
   new WormChart({"el" : "#wormchart_container", "data": data})
 
 ```
