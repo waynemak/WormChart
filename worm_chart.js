@@ -1,22 +1,26 @@
 var WormChart = function(args) {
-  this.positive = args["positive"];
-  this.negative = 100 - this.positive;
-  this.container = args["container"];
+  //this.positive = args["positive"];
+  //this.negative = 100 - this.positive;
+  this.container = args["el"];
+  this.data = args["data"];
+
+  this.htmlPortion = function(size, portionNumber) {
+    return '<div class="worm_portion portion_number' + (portionNumber % 3) + '" style="width:' + size + '%;"></div>'
+  }
 
   this.render = function(){
-    jQuery("#worm_chart .positive").css("height", "" + this.positive + "%");
-    jQuery("#worm_chart .negative").css("height", "" + this.negative + "%");
-    this.height = parseFloat($(this.container).css("height"));
+    var dataLength = this.data.length;
+    var innerHtml = ""
+    for(var i = 0; i < dataLength; i ++){
+      innerHtml += this.htmlPortion(this.data[i], i)
+
+    }
+
+    jQuery(this.container).html('<div class="worm_chart">' + 
+                                innerHtml + '</div>');
   };
 
-
-
-  this.wormHtml = '<div id="worm_chart"> <div class="negative"></div> <div class="positive"> </div> </div>';
-  
-  jQuery(this.container).html(this.wormHtml);
-
   this.render();
-  this.bindToClick();
-  
+
   return this;
 };
