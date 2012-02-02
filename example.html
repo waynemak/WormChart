@@ -12,13 +12,7 @@
 
   <script type="text/javascript">
     $(function(){
-      window.worm = new WormChart({"positive": 80, 
-        "container": "#worm_container"
-      });
-
-      $("#worm_container").bind("chartUpdated", function(event, args) {
-        console.log(args);
-      })
+      window.worm = new WormChart({"el" : "#worm_container", "data": [25, 35, 40]});
     });
   </script>
 </body>

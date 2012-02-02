@@ -1,15 +1,44 @@
-#worm_chart {
-  height: 250px;
-  width: 40px;
-  border: 1px solid black;
-  background-color: #ccc;
+#worm_container {
+  height: 50px;
+  width: 500px;
 }
 
-#worm_chart .positive {
+.worm_chart {
+  padding: 0px;
+  margin: 0px;
   width: 100%;
-  background-color: #38AB0B;
+  height: 100%;
 }
 
-#worm_chart .negative {
-  width: 100%;
+.worm_portion {
+  height: 100%;
+  float: left;
+}
+
+.worm_portion:first-child {
+  -webkit-border-top-left-radius: 35px;
+  -webkit-border-bottom-left-radius: 35px;
+  -moz-border-radius-topleft: 35px;
+  -moz-border-radius-bottomleft: 35px;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+}
+
+.worm_portion:last-child {
+  -webkit-border-top-right-radius: 35px;
+  -webkit-border-bottom-right-radius: 35px;
+  -moz-border-radius-topright: 35px;
+  -moz-border-radius-bottomright: 35px;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+.portion_number0 {
+  background-color: red;
+}
+.portion_number1 {
+  background-color: blue;
+}
+.portion_number2 {
+  background-color: green;
 }
