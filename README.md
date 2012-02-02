@@ -3,7 +3,7 @@
 It's a chart that looks like a worm.  It's a health gauge/meter that
 exposes a JS API for changing its value and animates smoothly between values.  
 
-*Checkout an example [here](https://waynemak.github.com/wormchart)*
+**Checkout an example [here](https://waynemak.github.com/wormchart)**
 
 ##Usage
 ```javascript
