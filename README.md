@@ -2,6 +2,8 @@
 
 It's a chart that looks like a worm.
 
+Checkout and example [here](https://waynemak.github.com/wormchart)
+
 ##Usage
 ```javascript
 
