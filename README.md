@@ -1,6 +1,7 @@
 #WormChart
 
-It's a chart that looks like a worm.
+It's a chart that looks like a worm.  It's a health gauge/meter that
+exposes a JS API for changing its value and animates smoothly between values.  
 
 ##Usage
 ```javascript
