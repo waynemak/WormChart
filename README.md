@@ -20,7 +20,7 @@ exposes a JS API for changing its value and animates smoothly between values.
 
 ##Styling
 We believe that things should be styled with CSS not by hand passing JS
-arguments. [Style.css](https://github.com/waynemak/WormChart/blob/master/style.css) will serve as a good starting point. From there hack away to make wormy look the way you want.
+arguments. [worm_chart.css](https://github.com/waynemak/WormChart/blob/master/worm_chart.css) will serve as a good starting point. From there hack away to make wormy look the way you want.
 
 ## Dependencies
 * jQuery >= 1.6.0
