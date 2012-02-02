@@ -5,7 +5,7 @@ var WormChart = function(args) {
   this.data = args["data"];
 
   this.htmlPortion = function(size, portionNumber) {
-    return '<div class="worm_portion portion_number' + (portionNumber % 3) + '" style="width:' + size + '%;"></div>'
+    return '<div class="worm_portion portion_color' + (portionNumber % 3) + '" style="width:' + size + '%;"></div>'
   }
 
   this.render = function(){
