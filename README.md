@@ -21,10 +21,7 @@ exposes a JS API for changing its value and animates smoothly between values.
 ##Styling
 We believe that things should be styled with CSS not by hand passing JS
 arguments. There is a default stylesheet called style.css in the
-project.
-
-That will serve as a good starting point. From there hack away to make
-wormy look the way you want.
+project. Style.css will serve as a good starting point. From there hack away to make wormy look the way you want.
 
 ## Dependencies
 * jQuery >= 1.6.0
