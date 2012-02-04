@@ -1,7 +1,7 @@
 #WormChart
 
-It's a chart that looks like a worm.  It's a health gauge/meter that
-exposes a JS API for changing its value and animates smoothly between values.  
+It's a chart that looks like a worm. 
+Simple jQuery Plugin that generates a horizontal pie chart style graph.
 
 **Checkout an example [here](https://waynemak.github.com/wormchart)**
 
@@ -11,10 +11,9 @@ exposes a JS API for changing its value and animates smoothly between values.
   // The data is just an array of percentages.
   var data = [25, 34, 16, 25]
 
-  // It's easy. Just new up the object passing it the data you want to display
-  // Tell it what element you want the WormChart to be drawn into
-  // and pass it an array of data that you want to render
-  new WormChart({"el" : "#wormchart_container", "data": data})
+  //Simply call wormChart on the desired container object to create wormy
+  $("#sample_container").wormChart(data);
+
 
 ```
 
@@ -26,7 +25,4 @@ arguments. [worm_chart.css](https://github.com/waynemak/WormChart/blob/master/wo
 * jQuery >= 1.6.0
 
 ## Future Plans
-
 * Add some tests
-* Make it a real jQuery plugin
-* Make the color scheme customizeable
