@@ -3,7 +3,7 @@
 It's a chart that looks like a worm. 
 Simple jQuery Plugin that generates a horizontal pie chart style graph.
 
-**Checkout an example [here](https://waynemak.github.com/wormchart)**
+**Checkout an example [here](https://waynemak.github.com/WormChart)**
 
 ##Usage
 ```javascript
