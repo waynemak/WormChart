@@ -1,7 +1,7 @@
 #WormChart
 
 It's a chart that looks like a worm. 
-Simple jQuery Plugin that generates a horizontal pie chart style graph.
+Simple jQuery Plugin that generates a horizontal stacked bar graph
 
 **Checkout an example [here](http://waynemak.github.com/WormChart)**
 
